@@ -37,6 +37,32 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Images
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let headerImage = document.getElementById("cta-img");
+headerImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let midPageImage = document.getElementById("middle-img");
+midPageImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Text content
+let navItems = document.querySelector('.container header nav a');
+navItems.textContent = siteContent["nav"]["nav-item-1"];
+
+let ctaText = document.querySelector('.cta-text');
+ctaText.textContent = siteContent["cta"]["h1"];
+
+let mainContent1 = document.querySelector('.main-content .top-content .text-content');
+mainContent1.textContent = siteContent["main-content"]["features-h4"];
+
+
+// Footer
+let foot = document.querySelector('footer');
+foot.textContent = siteContent["footer"]["copyright"];
+
+// Change color of nav text
+navItems.style.color = "green";
+
+
